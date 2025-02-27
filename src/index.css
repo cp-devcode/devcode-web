@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Moto:wght@400;500;700&display=swap');
+@font-face {
+  font-family: 'Mokoto';
+  src: url(/Mokoto-Demo.ttf);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-dark text-gray-100 overflow-x-hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: Mokoto;
+  }
+
+  .text-xl {
+    font-family: Mokoto;
+  }
+
+}
+
+@layer utilities {
+  .container {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .bg-gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-dark-accent via-teal-300 to-dark-accent;
+  }
+}
+
+@layer components {
+  .cursor-glow {
+    @apply fixed pointer-events-none w-[150px] h-[150px] -translate-x-1/2 -translate-y-1/2 rounded-full;
+    background: radial-gradient(circle, rgba(100, 255, 218, 0.15) 0%, rgba(100, 255, 218, 0) 70%);
+    z-index: 9999;
+  }
+
+  .logo-container {
+    @apply relative;
+  }
+
+  .logo-icon {
+    @apply relative z-10;
+  }
+
+  .logo-rings {
+    @apply absolute inset-0 animate-pulse-rings;
+    background: radial-gradient(circle, rgba(100, 255, 218, 0.2) 0%, transparent 70%);
+  }
+
+  .nav-link {
+    @apply relative hover:text-dark-accent transition-colors duration-300;
+  }
+
+  .nav-link::after {
+    @apply content-[''] absolute left-0 bottom-[-4px] w-0 h-[2px] bg-dark-accent transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .interactive-card {
+    @apply transform transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(100,255,218,0.15)];
+  }
+
+  .button-primary {
+    @apply relative overflow-hidden bg-dark-accent text-white px-8 py-3 rounded-lg transition-all duration-300
+           hover:bg-opacity-90 hover:shadow-[0_0_20px_rgba(100,255,218,0.3)]
+           active:scale-95;
+  }
+
+  .button-secondary {
+    @apply relative overflow-hidden border-2 border-dark-accent text-dark-accent px-8 py-3 rounded-lg
+           transition-all duration-300 hover:bg-dark-accent hover:text-white
+           active:scale-95;
+  }
+
+  .title-gradient {
+    @apply font-moto bg-gradient-text animate-gradient;
+  }
+}
