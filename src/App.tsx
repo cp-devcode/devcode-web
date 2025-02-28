@@ -471,8 +471,8 @@ function App() {
     showWelcomeScreen: false,
     defaultLanguage: 'en',
     initialMessages: [
-      "Assalam A'likum! 👋",
-      "Am CP-Devcode's AI Assistant. How can I assist you today?"
+      "Assalam A'likum! 👋\nAm CP-Devcode's AI Assistant. How can I assist you today?",
+      "you can also Email us: sales@cp-devcode.com"
     ],
     i18n: {
       en: {
