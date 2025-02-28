@@ -13,7 +13,7 @@ const plans = [
     id: 'starter',
     name: 'Starter',
     price: 15000,
-    description: 'Perfect for starting out with AI and online presence',
+    description: 'Perfect for starting out with online presence and AI',
     features: [
       'Custom Website',
       'Custom Domain',
@@ -29,7 +29,7 @@ const plans = [
     id: 'professional',
     name: 'Professional',
     price: 27000,
-    description: 'Ideal for Professionals in their field',
+    description: 'Ideal for Professionals who have an always busy business,
     features: [
       'All What Is Included In Starter',
       'AI Personal Assistant',
@@ -53,7 +53,7 @@ const plans = [
       '2 Custom AI Agents',
       'Advanced Analytics',
       'Advanced Security',
-      '3 Months Of Free Customizations'
+      '1 Month Of Free Customizations'
     ]
   },
   {
@@ -198,7 +198,7 @@ function PlanDetails() {
         <div className="bg-dark-lighter rounded-2xl p-6 md:p-12">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">{plan.name} Plan</h1>
           <div className="text-2xl sm:text-3xl font-bold text-dark-accent mb-6">
-            {plan.price ? `$${plan.price}` : 'Custom Pricing'}<span className="text-lg sm:text-xl text-gray-400">{plan.price ? '/month' : ''}</span>
+            {plan.price ? `$${plan.price}` : 'Custom Pricing'}<span className="text-lg sm:text-xl text-gray-400">{plan.price ? 'EGP' : ''}</span>
           </div>
           <p className="text-lg sm:text-xl text-gray-400 mb-8">{plan.description}</p>
           
